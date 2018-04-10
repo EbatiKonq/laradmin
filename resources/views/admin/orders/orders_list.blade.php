@@ -46,10 +46,10 @@
                                 <td>
                                     <a href="{{ route('orders.edit', ['id' => $row->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil" title="Edit"></i> </a>
                                     <a href="{{ route('orders.show', ['id' => $row->id]) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o" title="Delete"></i> </a>
-                                    <a href="{{ route('orderdetails.index', ['id' => $row->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil" title="Products"></i> </a>
+                                    <a href="{{ route('orderdetails.index', ['id' => $row->id]) }}" class="btn btn-success btn-xs"><i class="fa fa-calculator" title="Products"></i> </a>
                                 </td>
                                 @else
-                                <td>Order is uploaded <a href="{{ route('orderdetails.index', ['id' => $row->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil" title="Products"></i> </a></td>
+                                <td>Order is uploaded <a href="{{ route('orderdetails.index', ['id' => $row->id]) }}" class="btn btn-success btn-xs"><i class="fa fa-calculator" title="Products"></i> </a></td>
                                 @endif
                             </tr>
                             @endforeach
