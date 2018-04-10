@@ -14,24 +14,13 @@
                     <br />
                     <form method="post" action="{{ route('customers.update', ['id' => $customer->id]) }}" data-parsley-validate class="form-horizontal form-label-left">
 
-                        <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">First Name <span class="required">*</span>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" value="{{$customer->first_name}}" id="first_name" name="first_name" class="form-control col-md-7 col-xs-12">
-                                @if ($errors->has('first_name'))
-                                <span class="help-block">{{ $errors->first('first_name') }}</span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name">Last Name <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" value="{{$customer->last_name}}" id="last_name" name="last_name" class="form-control col-md-7 col-xs-12">
-                                @if ($errors->has('last_name'))
-                                <span class="help-block">{{ $errors->first('last_name') }}</span>
+                                <input type="text" value="{{$customer->name}}" id="name" name="name" class="form-control col-md-7 col-xs-12">
+                                @if ($errors->has('name'))
+                                <span class="help-block">{{ $errors->first('name') }}</span>
                                 @endif
                             </div>
                         </div>

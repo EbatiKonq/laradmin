@@ -22,9 +22,12 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
     Route::resource('product-categories', 'ProductCategoriesController');
     Route::resource('products', 'ProductsController');
     Route::resource('users', 'UsersController');
-
-    Route::get('orders',[
-        'uses' => 'OrdersController@index',
-        'as' => 'orders.index',
-        ]);
+	Route::resource('orders', 'OrdersController');
+	Route::resource('api', 'Api2Controller');
+	Route::resource('orderdetails', 'OrderDetailsController');
+	
+    //Route::get('orderdetails',[
+     //   'uses' => 'OrderDetailsController@index',
+     //   'as' => 'orderdetails.index',
+     //   ]);
 });

@@ -15,8 +15,7 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Name</th>
                                 <th>Email</th>
                                 <th>Postal Address</th>
                                 <th>Physical Address</th>
@@ -25,8 +24,7 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Name</th>
                                 <th>Email</th>
                                 <th>Postal Address</th>
                                 <th>Physical Address</th>
@@ -37,8 +35,7 @@
                             @if (count($customers))
                             @foreach($customers as $row)
                             <tr>
-                                <td>{{$row->first_name}}</td>
-                                <td>{{$row->last_name}}</td>
+                                <td>{{$row->name}}</td>
                                 <td>{{$row->email}}</td>
                                 <td>{{$row->postal_address}}</td>
                                 <td>{{$row->physical_address}}</td>

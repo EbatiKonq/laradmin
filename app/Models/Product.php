@@ -38,4 +38,9 @@ class Product extends Model
     {
         return $this->belongsTo('Larashop\Models\Category','category_id');
     }
+	
+	public function orderdetails()
+	{
+		return $this->belongsTo('Larashop\Models\OrderDetail', 'id');
+	}
 }

@@ -16,14 +16,16 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('order_number')->unique();
-            $table->string('transaction_date');
-            $table->integer('customer_id')->unsigned()->index();
+			$table->date('date_order');
+            $table->date('delivery_date');
+            $table->integer('partner_id')->unsigned()->index();
             $table->float('total_amount');
-            $table->string('status');
+			$table->string('currency_id');
+            $table->boolean('uploaded');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('customer_id')->references('id')->on('customers');
+			
+            $table->foreign('partner_id')->references('id')->on('customers');
         });
     }
 
